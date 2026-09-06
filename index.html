@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto Episodes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background:
+                linear-gradient(135deg, rgba(13,13,13,0.85), rgba(43,14,14,0.85)),
+                url('wp5407411.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px 60px;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6a3d;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6a3d;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #e94e1f;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            max-width: 600px;
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #cfcfcf;
+            margin-bottom: 30px;
+        }
+
+        .feature-img {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 420px;
+            width: 40%;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .anim {
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ---------- Reviews ---------- */
+        .reviews {
+            padding: 60px;
+            background-color: #141414;
+        }
+
+        .reviews h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .reviews-sub {
+            color: #a8a8a8;
+            margin-bottom: 30px;
+        }
+
+        .review-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .review-form input,
+        .review-form select,
+        .review-form textarea {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            color: #f0f0f0;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            flex: 1 1 200px;
+        }
+
+        .review-form textarea {
+            flex: 1 1 100%;
+            resize: vertical;
+        }
+
+        .review-form button {
+            flex: 0 0 auto;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .review-card {
+            background-color: #1f1f1f;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .review-card h4 {
+            margin-bottom: 6px;
+        }
+
+        .review-card .stars {
+            color: #ff6a3d;
+            margin-bottom: 8px;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 20px;
+            }
+
+            .feature-img {
+                position: static;
+                transform: none;
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .content {
+                margin-top: 40px;
+            }
+
+            .reviews {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <ul>
+                <li><a href="https://www.viz.com/naruto" target="_blank">Manga</a></li>
+                <li><a href="https://www.crunchyroll.com/series/GY9PJ5KWR/naruto" target="_blank">Series</a></li>
+                <li><a href="https://www.crunchyroll.com/series/GY9PJ5KWR/naruto" target="_blank">Episodes</a></li>
+            <div>
+                <a href="https://www.crunchyroll.com/login" target="_blank" class="btn">Log in / Sign up</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <h1 class="anim">Watch<br>Naruto Episodes</h1>
+            <p class="anim">Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto.
+                It tells the story of Naruto Uzumaki, a young, socially isolated ninja
+                who seeks recognition from his peers and dreams</p>
+            <a href="https://www.crunchyroll.com/series/GY9PJ5KWR/naruto" target="_blank" class="btn anim">Watch Now</a>
+        </div>
+        <img src="Pic.png" class="feature-img anim">
+    </div>
+
+    <section class="reviews">
+        <h2>Fan Reviews</h2>
+        <p class="reviews-sub">Watched it? Leave your own review below.</p>
+
+        <form id="reviewForm" class="review-form">
+            <input type="text" id="reviewName" placeholder="Your name" required>
+            <select id="reviewRating" required>
+                <option value="" disabled selected>Rating</option>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+            </select>
+            <textarea id="reviewText" placeholder="Write your review..." rows="3" required></textarea>
+            <button type="submit" class="btn">Submit Review</button>
+        </form>
+
+        <div id="reviewGrid" class="review-grid">
+        </div>
+    </section>
+</body>
+</html>
